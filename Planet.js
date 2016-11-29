@@ -1,12 +1,12 @@
 function Planet() {
   // position and radius
-  var r = random(30);
+  var r = random(10,25);
   var cx = 0;
   var cy = 0;
   var pos = createVector(cx, cy);
   //the main circle's attributes
-  var vx = 1;
-  var vy = 0;
+  var vx = 0.5;
+  var vy = random(-0.5, 0.5);
   var circleV = createVector(vx, vy);
   // planet attributes,  r*r = x*x + y*y
   var planetAngle = 0.0; // 0-
@@ -14,7 +14,7 @@ function Planet() {
   var px = Math.cos(planetAngle) * r + cx;
   var py = Math.sin(planetAngle) * r + cy;
   var pPos = createVector(px, py);
-  var pVel = PI/32; // in radians/update
+  var pVel = PI/1024; // in radians/update
   var noiseLower = 1;
   var noiseUpper = 2;
   this.updatePlanet = function() {

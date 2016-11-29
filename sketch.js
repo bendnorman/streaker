@@ -1,46 +1,40 @@
-var walk;
-var walkers = [];
-var numWalkers = 2;
+var elements = [];
+var numElements = 7;
 var padding = 100;
 
 
 function setup() {
   createCanvas(screen.width,screen.height);
-  for(var i = 0; i < numWalkers; i++) {
-    walk = new Walker();
-    walkers.push(walk);
-
+  for(var i = 0; i < numElements; i++) {
+    element = new Walker();
+    element.test;
+    elements.push(element);
   }
 }
 
 function draw() {
-  // if walkers[0].getXPosition() > width {
+  // if elements[0].getXPosition() > width {
   //   return;
   // }
-
   push();
-  for (var i = 0; i < numWalkers; i++) {
+  for (var i = 0; i < numElements; i++) {
     translate(0, 50);
-    walkers[i].update();
-    walkers[i].display();
-
+    elements[i].update();
+    elements[i].display();
   }
   pop();
   border();
 }
 
 function border() {
-  noStroke();
-  fill(255);
-  rect(0,0, padding, height);
-   rect(width - padding ,0, padding, height);
-   rect(0,0,width, padding)
-      rect(0,height-padding,width, padding)
-
+  noStroke()
+  fill(255)
+  rect(0,0, padding, height)
+  rect(width - padding ,0, padding, height)
+  rect(0,0,width, padding)
+  rect(0,height-padding,width, padding)
 }
 
 function mouseReleased() {
-
   fullscreen(true);
-
 }
