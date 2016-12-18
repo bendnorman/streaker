@@ -67,7 +67,6 @@ function Walker() {
     } else {
       // fill(100%,0%,100%,0.5)
       // fill(r, g, b);
-      //rgb(255, 110, 91)
       // c = color('rgba(120, 191, 168, '+opacity+')');
       c = color('rgba(255, 110, 91, '+opacity+')');
       fill(c); // Use updated 'c' as fill color

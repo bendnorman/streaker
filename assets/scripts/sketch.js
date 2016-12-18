@@ -1,6 +1,6 @@
 var elements = [];
 var numElements = 1;
-var pack_size = 3;
+var pack_size = 500;
 var padding = 125;
 
 
@@ -10,7 +10,7 @@ function setup() {
   // var x = (windowWidth - width) / 2;
   // var y = (windowHeight - height) / 2;
   // cnv.position(x, y);
-  background(255, 0, 200);
+  background(0, 0, 0);
   for(var i = 0; i < numElements; i++) {
     element = new Pack(pack_size);
     element.test;
