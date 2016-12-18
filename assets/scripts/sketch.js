@@ -1,6 +1,6 @@
 var elements = [];
 var numElements = 7;
-var padding = 100;
+var padding = 125;
 
 
 function setup() {
@@ -10,6 +10,8 @@ function setup() {
     element.test;
     elements.push(element);
   }
+  // createCanvas(100, 100);
+  // background(255, 0, 200);
 }
 
 function draw() {
@@ -27,12 +29,12 @@ function draw() {
 }
 
 function border() {
-  noStroke()
-  fill(255)
+  // noStroke()
+  // fill(255)
   rect(0,0, padding, height)
-  rect(width - padding ,0, padding, height)
+  // rect(width - padding ,0, padding, height)
   rect(0,0,width, padding)
-  rect(0,height-padding,width, padding)
+  // rect(0,height-padding,width, padding)
 }
 
 function mouseReleased() {
