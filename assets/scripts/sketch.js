@@ -1,12 +1,18 @@
 var elements = [];
-var numElements = 7;
+var numElements = 1;
+var pack_size = 3;
 var padding = 125;
 
 
 function setup() {
-  createCanvas(screen.width,screen.height);
+  // createCanvas(screen.width,screen.height);
+  var cnv = createCanvas(screen.width, screen.height);
+  // var x = (windowWidth - width) / 2;
+  // var y = (windowHeight - height) / 2;
+  // cnv.position(x, y);
+  background(255, 0, 200);
   for(var i = 0; i < numElements; i++) {
-    element = new Walker();
+    element = new Pack(pack_size);
     element.test;
     elements.push(element);
   }
@@ -31,9 +37,9 @@ function draw() {
 function border() {
   // noStroke()
   // fill(255)
-  rect(0,0, padding, height)
+  // rect(0,0, padding, height)
   // rect(width - padding ,0, padding, height)
-  rect(0,0,width, padding)
+  // rect(0,0,width, padding)
   // rect(0,height-padding,width, padding)
 }
 
